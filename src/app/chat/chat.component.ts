@@ -4,12 +4,14 @@ import {selectUsername} from "../../store/user/user.selectors";
 import {Observable} from "rxjs";
 import {AppState} from "../../store/app.state";
 import {AsyncPipe} from "@angular/common";
+import {MessageComponent} from "../message/message.component";
 
 @Component({
   selector: 'app-chat',
   standalone: true,
   imports: [
-    AsyncPipe
+    AsyncPipe,
+    MessageComponent
   ],
   templateUrl: './chat.component.html',
   styleUrl: './chat.component.scss'

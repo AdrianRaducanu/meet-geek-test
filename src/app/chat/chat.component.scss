@@ -1,0 +1,74 @@
+.component-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background-color: #f7f7f7;
+}
+
+.messages-container {
+  height: 85%;
+  width: 100%;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  padding-top: 1rem;
+}
+
+.writer-container {
+  height: 15%;
+  width: 100%;
+  padding: 2rem 5rem 0 5rem;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.input-with-icons {
+  width: 100%;
+  padding-right: 2rem;
+  padding-left: 1rem;
+  height: 2.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.icon-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #5521b5;
+  cursor: pointer;
+  right: 2%;
+}
+
+.first-icon {
+  right: 5%;
+}
+
+.icon-button:hover {
+  color: #311369;
+}
+
+.icon-button.disabled {
+  color: grey;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.checkbox-input {
+  width: 20px;
+  height: 20px;
+}
+
+.checkbox-label {
+  margin-left: 1rem;
+  cursor: pointer;
+  color: #969696;
+}
