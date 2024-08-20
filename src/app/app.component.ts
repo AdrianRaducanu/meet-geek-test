@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import {FormsModule} from "@angular/forms";
+import {RouterOutlet} from '@angular/router';
+import { FormsModule } from "@angular/forms";
 
 @Component({
   selector: 'app-root',
@@ -10,9 +10,5 @@ import {FormsModule} from "@angular/forms";
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  userInput: string = "";
 
-  onSubmit(): void {
-    console.log(this.userInput)
-  }
 }

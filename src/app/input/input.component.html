@@ -1,0 +1,7 @@
+<div class="component-container">
+  <form (ngSubmit)="onSubmit()" class="form-container">
+    <label for="input" class="form-label">Username</label>
+    <input type="text" id="input" [(ngModel)]="userInput" name="input" class="form-input"/>
+    <button type="submit" class="form-submit" [disabled]="!userInput">Submit</button>
+  </form>
+</div>
