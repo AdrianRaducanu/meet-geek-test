@@ -38,9 +38,18 @@ label {
     margin-bottom: 1rem;
     padding: 0.5rem;
     border-radius: 5px;
-    background: #ffae00;
   }
   label {
     text-align: center;
   }
+}
+
+.image-container {
+  width: 80%;
+  display: flex;
+  justify-content: end;
+}
+
+.sent-image {
+  width: 10rem;
 }

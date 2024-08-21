@@ -1,0 +1,17 @@
+<div class="component-container" [ngClass]="{'user-text': data.isUser}">
+  <div class="message-icons" *ngIf="data.isUser">
+    <i class="fas fa-copy icon-button copy-icon" (click)="copy()"></i>
+    <i class="fas fa-trash icon-button delete-icon" (click)="delete()"></i>
+  </div>
+  <div *ngIf="data.image; else textMessage" class="image-container">
+    <img [src]="safeImage" alt="Sent image" class="sent-image">
+  </div>
+  <ng-template #textMessage>
+    <label [ngStyle]="{ textAlign: data.isUser ? 'end' : 'start' }">{{ data.text }}</label>
+  </ng-template>
+
+  <div class="message-avatar" [ngStyle]="{ order: data.isUser ? 3 : 1 }">
+    <i class="fas fa-user icon-button" [ngStyle]="{ background: data.isUser ? '#ffae00' : '#47bfee' }"></i>
+    <label>{{ data.isUser ? username : 'ChatBot' }}</label>
+  </div>
+</div>

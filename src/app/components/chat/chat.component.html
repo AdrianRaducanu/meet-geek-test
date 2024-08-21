@@ -1,0 +1,17 @@
+<div class="component-container">
+  <div class="messages-container">
+    <app-message *ngFor="let msj of messages" [data]="msj" [username]="username$|async" (onDelete)="deleteMessage($event)"></app-message>
+  </div>
+  <div class="writer-container">
+    <div class="input-container">
+      <input type="text" placeholder="Write message" class="input-with-icons" [(ngModel)]="textInput">
+      <i class="fas fa-image icon-button first-icon" [ngClass]="{'wait-icon': loadingState}" (click)="sendImage()"></i>
+      <i class="fas fa-paper-plane icon-button" [class.disabled]="!textInput" (click)="sendMessage()" *ngIf="!loadingState"></i>
+      <i class="fas fa-pause icon-button wait-icon" *ngIf="loadingState"></i>
+    </div>
+    <div class="checkbox-container">
+      <input type="checkbox" id="myCheckbox" class="checkbox-input" [(ngModel)]="immediateResponse">
+      <label for="myCheckbox" class="checkbox-label">Send message immediately on Enter key</label>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {RouterOutlet} from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Router, RouterOutlet} from '@angular/router';
 import { FormsModule } from "@angular/forms";
 
 @Component({
@@ -9,6 +9,11 @@ import { FormsModule } from "@angular/forms";
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    this.router.navigate(['/'])
+  }
 
 }
