@@ -4,7 +4,9 @@
   </div>
   <div class="writer-container">
     <div class="input-container">
-      <input type="text" placeholder="Write message" class="input-with-icons" [(ngModel)]="textInput">
+      <form (ngSubmit)="sendMessage()">
+        <input type="text" placeholder="Write message" class="input-with-icons" [(ngModel)]="textInput" name="messageInput">
+      </form>
       <i class="fas fa-image icon-button first-icon" [ngClass]="{'wait-icon': loadingState}" (click)="sendImage()"></i>
       <i class="fas fa-paper-plane icon-button" [class.disabled]="!textInput" (click)="sendMessage()" *ngIf="!loadingState"></i>
       <i class="fas fa-pause icon-button wait-icon" *ngIf="loadingState"></i>

@@ -17,9 +17,13 @@
   height: 2rem;
   width: 10%;
 
-  i {
+  .icon-button {
     color: #b4b4b4;
     cursor: pointer;
+  }
+
+  .icon-button:hover {
+    color: #5521b5;
   }
 }
 
